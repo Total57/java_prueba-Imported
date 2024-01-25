@@ -1,6 +1,7 @@
 package frc.robot;
 
 import edu.wpi.first.util.sendable.SendableRegistry;
+import edu.wpi.first.wpilibj.DutyCycleEncoder;
 import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.TimedRobot;
 import edu.wpi.first.wpilibj.drive.DifferentialDrive;
@@ -13,6 +14,8 @@ public class Robot extends TimedRobot {
   private final CANSparkMax m_rightMotor = new CANSparkMax(2, MotorType.kBrushless);
 
   private final Joystick m_stick = new Joystick(0);
+
+  DutyCycleEncoder encoder = new DutyCycleEncoder(0);
 
   public Robot() { }
 
@@ -27,5 +30,8 @@ public class Robot extends TimedRobot {
     m_leftMotor.set(axis1);
     m_rightMotor.set(axis5);
 
+    encoder.setDistancePerRotation(4.0);
+
+    //hola
   }
 }
