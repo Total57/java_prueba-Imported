@@ -33,9 +33,7 @@ public class Robot extends TimedRobot {
     absoluteEncoder = new AnalogInput(absoluteEncoder);
   } 
   }
-
-
-
+  
   private RelativeEncoder encoder_r ;
   private RelativeEncoder encoder_l ;
 
